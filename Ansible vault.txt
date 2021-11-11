@@ -1,0 +1,14 @@
+$ ansible-vault create secret_file.yml
+Hello, this is my secret file
+$ vim secret_file.yml
+$ ansible-vault edit secret_file.yml
+$ ansible-vault view secret_file.yml
+$ ansible-vault encrypt file1.yml
+$ ansible-vault decrypt file1.yml
+$ ansible-vault rekey secret_file.yml
+$ ansible-playbook playbook_example.yml --ask-vault-pass
+$ ansible-playbook playbook_example.yml --vault-id @prompt
+$ ansible-playbook playbook_example.yml --vault-password-file /etc/ansible/vault_pass.txt
+$ ansible-playbook playbook_example.yml --vault-id /etc/ansible/vault_pass.txt
+$ ansible-vault encrypt_string 'P@ssword123' --name 'my_secret'
+

@@ -1,0 +1,24 @@
+sudo apt−get install docker−compose
+
+sudo apt−get install curl
+
+sudo curl −L "https://github.com/docker/compose/releases/download/1.24.0/docker−compose−$(uname −s)−$(uname −m)" −o /usr/local/bin/docker−compose
+
+sudo chmod +x /usr/local/bin/docker−compose
+
+#Import the flask module
+from flask import import Flask
+
+#Create a Flask constructor. It takes name of the current module as the argument
+app = Flask(__name__)
+
+#Create a route decorator to tell the application, which URL should be called for the #described function and define the function
+
+@app.route('/')
+def tutorialspoint():
+return "Welcome to TutorialsPoint"
+
+#Create the main driver function
+if __name__ == '__main__':
+#call the run method
+app.run(debug=True,host='0.0.0.0')
